@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import Pagination from "../components/Pagination";
-import SEO from "../components/Seo";
+import SEO from "../components/SEO";
 
 const MastersGrid = styled.div`
   display: grid;
