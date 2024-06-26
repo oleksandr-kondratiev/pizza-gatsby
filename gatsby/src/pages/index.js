@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ItemGrid from "../components/ItemGrid";
 import useLatestData from "../utils/useLatestData";
 import LoadingGrid from "../components/LoadingGrid";
+import SEO from "../components/SEO";
 
 const HomePageGrid = styled.div`
   display: grid;
@@ -46,14 +47,21 @@ const HomePage = () => {
   const { masters, pizzas } = useLatestData();
 
   return (
-    <div className="center">
-      <h1>The Best Pizza Downtown!</h1>
-      <p>Open 11am to 11pm Every Single Day</p>
-      <HomePageGrid>
-        <Masters masters={masters} />
-        <Pizzas pizzas={pizzas} />
-      </HomePageGrid>
-    </div>
+    <>
+      <SEO
+        image={masters[0]?.image?.asset?.fluid?.src}
+        title="Slick's Slices - The Best Pizza Downtown!"
+        description={`The Best Pizza Downtown! Open 11am to 11pm Every Single Day! Working now: ${masters.length} masters that are ready to slice you up! Hot Pizzas! Come on by, buy the slice!`}
+      />
+      <div className="center">
+        <h1>The Best Pizza Downtown!</h1>
+        <p>Open 11am to 11pm Every Single Day</p>
+        <HomePageGrid>
+          <Masters masters={masters} />
+          <Pizzas pizzas={pizzas} />
+        </HomePageGrid>
+      </div>
+    </>
   );
 };
 
