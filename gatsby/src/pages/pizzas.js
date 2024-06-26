@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import PizzaList from "../components/PizzaList";
 import ToppingsFilter from "../components/ToppingsFilter";
-import SEO from "../components/Seo";
+import SEO from "../components/SEO";
 
 const PizzasPage = ({ data, pageContext }) => {
   return (
