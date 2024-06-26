@@ -44,7 +44,7 @@ const Pizzas = ({ pizzas }) => {
 };
 
 const HomePage = () => {
-  const { masters, pizzas } = useLatestData();
+  const { masters = [], pizzas = [] } = useLatestData();
 
   return (
     <>
